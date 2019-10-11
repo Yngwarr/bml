@@ -238,7 +238,7 @@ function db_add(db, q, a) {
 }
 
 function clear_text(text) {
-    return text.toLowerCase().replace(/[^а-яa-z]/g,'');
+    return text.toLowerCase().replace(/[^а-яa-z0-9]/g,'');
 }
 
 function input_type(type) {
