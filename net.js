@@ -277,8 +277,8 @@ function main() {
             });
             break;
         case 'checkbox':
+			opts = document.querySelectorAll(`.answer input[type='checkbox']`);
             opts.forEach(el => {
-            opts = document.querySelectorAll(`.answer input[type='checkbox']`);
                 let cans = clear_text(el.labels[0].innerText);
                 for (let i = 0; i < answers[q].length; ++i) {
                     if (cans.includes(answers[q][i])) {
