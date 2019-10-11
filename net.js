@@ -269,8 +269,8 @@ function main() {
                     if ((answers[q] && cans === 'верно') || (!answers[q] && cans === 'неверно')) {
                         el.click();
                     }
+				} else {
                     if (cans.includes(answers[q])) {
-                } else {
                         el.click();
                     }
                 }
