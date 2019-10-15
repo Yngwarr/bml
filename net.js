@@ -353,7 +353,7 @@ function main() {
     if (input_type('checkbox')) q_type = 'checkbox';
     else if (input_type('radio')) q_type = 'radio';
     else if (input_type('text')) q_type = 'text';
-    else { console.error('dunno what type of question it is'); return; }
+    else { console.error('dunno what type of question it is'); let q = clear_text(t.innerText); console.log(answers[q]); return; }
     console.log(`question type is ${q_type}`);
 
     let t = document.querySelector(".qtext");
