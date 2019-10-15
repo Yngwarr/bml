@@ -349,16 +349,20 @@ function input_type(type) {
 }
 
 function main() {
+	let t = document.querySelector(".qtext");
+    let q = clear_text(t.innerText);
+	let opts;
+	console.log(answers[q]);
+	
     let q_type = '';
     if (input_type('checkbox')) q_type = 'checkbox';
     else if (input_type('radio')) q_type = 'radio';
     else if (input_type('text')) q_type = 'text';
-    else { console.error('dunno what type of question it is'); let q = clear_text(t.innerText); console.log(answers[q]); return; }
+    else { console.error('dunno what type of question it is'); return; }
     console.log(`question type is ${q_type}`);
 
-    let t = document.querySelector(".qtext");
-    let q = clear_text(t.innerText);
-    let opts;
+
+    
     
     switch (q_type) {
         case 'text':
