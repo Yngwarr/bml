@@ -86,7 +86,7 @@ db_add(answers,
 	
 //TEST 1 END HERE
 
-//TEST 2_1 START HERE
+//TEST 2 START HERE
 db_add(answers,
 	'Укажите основное назначение функции ExpertInfo:',
 	'отображение перехваченных пакетов по группам;');
@@ -155,9 +155,9 @@ db_add(answers,
 	'На каком уровне модели OSI используются MAC-адреса?',
 	'канальный;');
 
-//TEST 2_1 END HERE
+//TEST 2 END HERE
 
-//TEST 2_2 START HERE
+//TEST 3 START HERE
 db_add(answers,
 	'Укажите значения адресных полей в начальном запросе DHCP-клиента при динамическом назначении адресов DHCP-сервером',
 	['IP-адрес назначения -> 255.255.255.255', 'IP-адрес источника -> 0.0.0.0']); //выпадающий список
@@ -221,22 +221,22 @@ db_add(answers,
 db_add(answers,
 	'Может ли IP-адрес компьютера изменяться с течением времени ?',
 	'да');
-//TEST 2_2 END HERE
+//TEST 3 END HERE
 
-//TEST 3-5 START HERE
+//TEST 4 START HERE
 
-//TEST 3-5 END HERE
+//TEST 4 END HERE
 
-//TEST 6 START HERE
+//TEST 5-7 START HERE
 
-//TEST 6 END HERE
+//TEST 5-7 END HERE
 
 /*db_add(answers,
 	'',
 	'');*/
 
 //RTS END HERE-------------
-//TEST 1 START HERE
+//TEST 1 START HERE Работа с последовательным портом
 db_add(answers,
 	'Порт ввода-вывода - это :',
 	'нумерованный путь, по которому передаются данные между процессором и программно-доступными элементами контроллера;');
@@ -384,7 +384,7 @@ db_add(answers,
 
 //TEST HZ END HERE
 
-//TEST 2 START HERE
+//TEST 2 START HERE Механизмы сообщений QNX
 db_add(answers,
 	'Каков размер кода импульса (в битах)?',
 	'8');
@@ -427,21 +427,41 @@ db_add(answers,
 db_add(answers,
 	'',
 	'');
-db_add(answers,
-	'',
-	'');
-db_add(answers,
-	'',
-	'');
-db_add(answers,
-	'',
-	'');	
+	
 //TEST 2 END HERE
 
-//TEST 3 START HERE
+//TEST 3 START HERE Taймеры QNX
+db_add(answers,
+	'Таймер отсчитывается ядром по ...',
+	'системным тикам');
+db_add(answers,
+	'Для относительного таймера ...',
+	'время задается от текущего времени');
+db_add(answers,
+	'Уведомление о срабатывании таймера возможно с помощью:',
+	['импульса', 'создания нового потока', 'сигнала']);
+db_add(answers,
+	'При срабатывании тайм-аута на блокировку, поток ...',
+	'Захватывает критическую секцию');
+db_add(answers,
+	'Длина системного тика для современных процессоров составляет ...',
+	'1 мсек');
+db_add(answers,
+	'Для установки тайм-аута ядра на несколько типов блокировки (сочетание нескольких флагов) используется операция ...',
+	'ИЛИ |');
+db_add(answers,
+	'Совместимы ли механизмы таймеров ОС QNX и других POSIX-совместимых ОС ?',
+	true);
+db_add(answers,
+	'Значение системного тика можно получить с помощью функции ...',
+	'clock_getres()');
+db_add(answers,
+	'Установка параметра it_interval, задающего время, через которое таймер будет циклично срабатывать повторно после первого срабатывания таймера, в ноль приведет к ....',
+	'Установке однократного таймера');
+
 //TEST 3 END HERE
 
-//TEST 4 START HERE
+//TEST 4 START HERE Синхронизация потоков QNX
 db_add(answers,
 	'Как называется участок кода, защищенный мутексом от совместного выполнения потоками ?',
 	'критическая секция');
@@ -497,11 +517,15 @@ db_add(answers,
 	'',
 	'');
 
-//TEST 4 END HERE
+//TEST 4 END HERE 
 
-//TEST 5 START HERE
+//TEST 5 START HERE Среда разработки QNX Momentics
 
 //TEST 5 END HERE
+
+//TEST 6 START HERE Планировщики СРВ.
+
+//TEST 6 END HERE
 
 	
 function db_add(db, q, a) {
