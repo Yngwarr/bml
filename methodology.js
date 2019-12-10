@@ -18,8 +18,9 @@ function ready(txt, qid) {
     page.querySelectorAll('.correct_response_offline').forEach(
         e => ids.push(e.parentElement.getAttribute('for')));
     
-    ids.filter(id => id.includes(qid))
-        .forEach(id => document.getElementById(id).click);
+    ids = ids.filter(id => id.includes(qid));
+    console.log(ids);
+    ids.forEach(id => document.getElementById(id).click());
 }
 
 function main() {
