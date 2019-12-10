@@ -20,7 +20,12 @@ function ready(txt, qid) {
     
     ids = ids.filter(id => id.includes(qid));
     console.log(ids);
-    ids.forEach(id => document.getElementById(id).click());
+    ids.forEach(id => {
+        let nid = id.split('_');
+        nid = ['choice', nid[2], nid[3]].join('_');
+        console.log(nid);
+        document.getElementById(nid).click()
+    });
 }
 
 function main() {
