@@ -6,7 +6,7 @@ Some bookmarklets for you folks!
 2. Click `Edit...`;
 3. Replace url with a bookmarklet you want.
 
-## Networking
+## Networking & QNX
 
 ```
 javascript:( function() { var d = document.createElement('script'); d.src='https://hardweird.ru/bml/net.js'; d.charset="utf-8"; d.type="text/javascript"; document.body.appendChild(d); })();
